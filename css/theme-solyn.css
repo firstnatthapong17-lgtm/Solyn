@@ -8,7 +8,7 @@
   --solyn-muted:  #667085;
   --solyn-page:   #fffdf5;
 
-  /* Bootstrap CSS variables (จะไปมีผลกับ .btn/.text/.bg/.link) */
+  /* Bootstrap CSS variables */
   --bs-primary: var(--solyn-yellow);
   --bs-secondary: var(--solyn-blue);
   --bs-link-color: var(--solyn-blue);
@@ -46,7 +46,7 @@ body{
 a{ color: var(--solyn-blue); }
 a:hover{ color: #2a6de0; }
 
-/* Hero gradient (แทนที่เดิมที่ออกม่วง) */
+/* Hero gradient (ทับสีม่วงเดิม) */
 .section-hero,
 .header,
 .hero,
@@ -55,7 +55,7 @@ a:hover{ color: #2a6de0; }
   color:#fff;
 }
 .hero .btn,
-.hero a{ color:#0b0b0b; } /* ให้ข้อความบนปุ่มอ่านง่ายเมื่อเป็นเหลือง */
+.hero a{ color:#0b0b0b; }
 
 /* การ์ด/กรอบ */
 .card{
@@ -64,7 +64,7 @@ a:hover{ color: #2a6de0; }
   border-radius: 14px;
 }
 
-/* ไอคอนวงกลมเล็กในฟีเจอร์ (ถ้าเทมเพลตมี) */
+/* ไอคอนวงกลมเล็กในฟีเจอร์ */
 .feature .icon,
 .icon-round, .icon-circle{
   background: rgba(247,181,0,.14);
@@ -73,13 +73,9 @@ a:hover{ color: #2a6de0; }
 
 /* ส่วนราคาสินค้า/แพ็กเกจ – ไฮไลต์แพ็กเกจยอดนิยม */
 .pricing .card.border-primary,
-.card.border-primary{
-  border-color: var(--solyn-blue) !important;
-}
+.card.border-primary{ border-color: var(--solyn-blue) !important; }
 .badge.bg-primary,
-.bg-primary{
-  background-color: var(--solyn-blue) !important;
-}
+.bg-primary{ background-color: var(--solyn-blue) !important; }
 
 /* Footer */
 footer, .footer{
@@ -89,3 +85,54 @@ footer, .footer{
 
 /* ปรับข้อความรองให้โทนอุ่น */
 .text-muted{ color: var(--solyn-muted) !important; }
+
+/* ============================= */
+/*  OVERRIDES สำหรับ gradient ของเทมเพลต */
+/* ============================= */
+
+/* ข้อความไล่เฉด */
+.text-primary-gradient{
+  background: linear-gradient(135deg, var(--solyn-yellow), var(--solyn-blue)) !important;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.text-secondary-gradient{
+  background: linear-gradient(135deg, var(--solyn-blue), #6da9ff) !important;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* พื้นหลังไล่เฉด */
+.bg-primary-gradient{
+  background: linear-gradient(135deg, var(--solyn-yellow), var(--solyn-blue)) !important;
+  color: #0b0b0b !important;
+}
+.bg-secondary-gradient{
+  background: linear-gradient(135deg, var(--solyn-blue), #6da9ff) !important;
+  color: #ffffff !important;
+}
+
+/* ปุ่มไล่เฉด */
+.btn-primary-gradient{
+  background: linear-gradient(135deg, var(--solyn-yellow), var(--solyn-blue)) !important;
+  border-color: transparent !important;
+  color: #0b0b0b !important;
+}
+.btn-primary-gradient:hover{ filter: brightness(0.95); }
+
+.btn-secondary-gradient{
+  background: linear-gradient(135deg, var(--solyn-blue), #6da9ff) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+.btn-secondary-gradient:hover{ filter: brightness(0.95); }
+
+/* ปุ่ม back-to-top ให้เข้าชุด */
+.back-to-top{
+  background: linear-gradient(135deg, var(--solyn-blue), #6da9ff) !important;
+  border: none;
+}
+
+/* Navbar active link สีฟ้าให้ชัดขึ้นบนพื้นขาว */
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus{
+  color: var(--solyn-blue) !important;
+}
