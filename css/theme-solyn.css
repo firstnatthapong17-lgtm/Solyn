@@ -1,0 +1,91 @@
+/* ===== SOLYN THEME OVERRIDES ===== */
+
+/* พาเลตหลัก + map เข้ากับ Bootstrap 5.3 */
+:root{
+  --solyn-yellow: #f7b500;
+  --solyn-blue:   #4285f4;
+  --solyn-ink:    #0f172a;
+  --solyn-muted:  #667085;
+  --solyn-page:   #fffdf5;
+
+  /* Bootstrap CSS variables (จะไปมีผลกับ .btn/.text/.bg/.link) */
+  --bs-primary: var(--solyn-yellow);
+  --bs-secondary: var(--solyn-blue);
+  --bs-link-color: var(--solyn-blue);
+  --bs-link-hover-color: #2a6de0;
+}
+
+/* ตัวอักษรและพื้นหลังหลัก */
+body{
+  color: var(--solyn-ink);
+  background: var(--solyn-page);
+}
+
+/* ปุ่มหลักให้เหลือง SOLYN */
+.btn-primary,
+.btn.btn-primary{
+  --bs-btn-bg: var(--solyn-yellow);
+  --bs-btn-border-color: var(--solyn-yellow);
+  --bs-btn-hover-bg: #e6a500;
+  --bs-btn-hover-border-color: #e6a500;
+  --bs-btn-active-bg: #cf9600;
+  --bs-btn-active-border-color: #cf9600;
+  color:#0b0b0b;
+}
+
+/* ปุ่มรอง (ใช้โทนฟ้า) */
+.btn-outline-primary{
+  --bs-btn-color: var(--solyn-blue);
+  --bs-btn-border-color: var(--solyn-blue);
+  --bs-btn-hover-color:#fff;
+  --bs-btn-hover-bg: var(--solyn-blue);
+  --bs-btn-hover-border-color: var(--solyn-blue);
+}
+
+/* ลิงก์ */
+a{ color: var(--solyn-blue); }
+a:hover{ color: #2a6de0; }
+
+/* Hero gradient (แทนที่เดิมที่ออกม่วง) */
+.section-hero,
+.header,
+.hero,
+.hero-header{
+  background: linear-gradient(135deg, var(--solyn-yellow) 0%, var(--solyn-blue) 100%) !important;
+  color:#fff;
+}
+.hero .btn,
+.hero a{ color:#0b0b0b; } /* ให้ข้อความบนปุ่มอ่านง่ายเมื่อเป็นเหลือง */
+
+/* การ์ด/กรอบ */
+.card{
+  border: 1px solid rgba(15,23,42,.08);
+  box-shadow: 0 6px 18px rgba(2,8,23,.04);
+  border-radius: 14px;
+}
+
+/* ไอคอนวงกลมเล็กในฟีเจอร์ (ถ้าเทมเพลตมี) */
+.feature .icon,
+.icon-round, .icon-circle{
+  background: rgba(247,181,0,.14);
+  color: var(--solyn-yellow);
+}
+
+/* ส่วนราคาสินค้า/แพ็กเกจ – ไฮไลต์แพ็กเกจยอดนิยม */
+.pricing .card.border-primary,
+.card.border-primary{
+  border-color: var(--solyn-blue) !important;
+}
+.badge.bg-primary,
+.bg-primary{
+  background-color: var(--solyn-blue) !important;
+}
+
+/* Footer */
+footer, .footer{
+  background: #f8fafc;
+  color: var(--solyn-muted);
+}
+
+/* ปรับข้อความรองให้โทนอุ่น */
+.text-muted{ color: var(--solyn-muted) !important; }
